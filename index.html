@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix land-page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;
+    300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+     <div class="navbar">
+       <div class="logo">
+       <img src="images/logo.png">
+       </div>
+         <nav>
+           <ul class="nav1">
+           <li>Home</li>
+           <li>TV Shows</li>
+           <li>Movies</li>
+           <li>Latest</li>
+           <li>My List</li>
+           </ul>
+         </nav>
+           <div class="search">
+            <input type="search" placeholder="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+           </div>
+      </div>
+    </header>
+    <!-- -----------home-------- -->
+     <section class="row">
+        <div class="col-1">
+          <h1>I3 REASONS WHY&nbsp;<i class="fas fa-play"></i></h1>
+          <h4>
+            <span>2020</span>
+            <span>18+</span>
+            <span>4 Seasons</span>
+          </h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicingelit Fugi
+          <br>similique ea perferendis veritatis in Lorem ipsum dolor sit at<br>ametpisicing elitporro rem accusantium magni optio,ipsum sit<br>amet consectetur adipisicingelit Fugi perferendis.</p>
+          <a href="#" class="btn1"><i class="fas fa-play"></i>  PLAY</a>
+          <a href="#" class="btn2"><i class="fas fa-plus"></i>  MY LIST</a>
+          <a class="play" onclick="toggleVideo();"><img src="images/play.png"><h3>WATCH TRAILER</h3></a>
+          
+         <div class="trailer">
+         <video src="./images/trailer.mp4" controls="true" autoplay="true"></video>
+         <img class="close" src="images/close.png" onclick="toggleVideo();">
+         </div>
+
+        </div>
+        <p class="copy">Copyright <i class="far fa-copyright"></i> 2021|Pritpal</p>
+
+    </section>
+                    
+     <script>
+         function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('pp');
+            video.currentTime = 0;
+            video.pause();
+         }
+     </script>              
+</body>
+</html>
